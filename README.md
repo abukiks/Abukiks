@@ -1,52 +1,116 @@
-## 👋 Hi there, I'm John Carl Abucay — Welcome to my GitHub!
+# ✅ TaskTrackr
 
-🚀 I'm a **Site Reliability Engineer (SRE)** passionate about system reliability, cloud infrastructure, and building real-world projects that follow DevOps and industry best practices like the **12-Factor App Methodology**.
+A fully documented FastAPI-based microservice that follows the **12-Factor App Methodology**, built for DevOps learning and portfolio showcasing.
 
----
-
-### 👨‍💻 Currently Working As
-
-- 🛠️ **Site Reliability Engineer (SRE)** — Focused on automating operations, improving system reliability, and enabling development teams to deploy with confidence.
+🔗 Live App: [https://tasktrackr.onrender.com](https://tasktrackr.onrender.com)  
+🐳 Docker Image: [`yourusername/tasktrackr`](https://hub.docker.com/repository/docker/yourusername/tasktrackr)
 
 ---
 
-### 🧠 Currently Learning
+## 📦 Tech Stack
 
-- 📦 DevOps Tooling (Terraform, Kubernetes, Ansible)
-- 🌐 CI/CD pipelines with GitHub Actions & Jenkins
-- ☁️ Cloud Platforms (AWS, GCP)
-- 🐧 Linux Mastery Projects (in progress)
-- 📈 Monitoring and Observability (Prometheus, Grafana, ELK)
-
----
-
-### 💼 Projects I'm Building
-
-- 🔧 **TaskTrackr** — A FastAPI app that implements the 12-Factor App Methodology  
-  _Learning DevOps by building and documenting everything from scratch_  
-  [👉 View the project](https://github.com/abukiks/tasktrackr)
-
-- 🐧 **Linux Mastery Series** — A project-based path from Linux basics to advanced ops (in progress)
+- **FastAPI** – Web framework
+- **SQLite / SQLAlchemy** – Database & ORM
+- **Docker** – Containerization
+- **GitHub Actions** – CI/CD
+- **Render** – Cloud deployment
+- **UptimeRobot** – Uptime monitoring
+- **python-dotenv** – Config management
 
 ---
 
-### 📌 Goals
+## 🚀 Features
 
-- ✅ Build & deploy production-grade DevOps projects  
-- ✅ Sharpen SRE skills with hands-on architecture and automation  
-- ✅ Contribute to the open-source/devops community  
-- ✅ Share my journey to inspire and help others in tech  
-
----
-
-### 📫 Connect with Me
-
-- ✉️ Email: [abukiks.x@gmail.com](mailto:abukiks.x@gmail.com)  
-- 💼 LinkedIn: [linkedin.com/in/abukiks](https://www.linkedin.com/in/abukiks)  
-- 🗂️ GitHub: [github.com/abukiks](https://github.com/abukiks)
+- ✅ `/tasks` CRUD API
+- ✅ `/health` endpoint for monitoring
+- ✅ Environment-based config loading (`.env.dev`, `.env.prod`)
+- ✅ Docker-ready & CI/CD pipeline with GitHub Actions
+- ✅ One-off admin CLI commands (`admin.py`)
 
 ---
 
-### ⚡ Fun Fact
+## 📘 12-Factor App Compliance
 
-> I believe in *learning by building* — every commit is a step forward in my DevOps and SRE journey.
+| #  | Factor                 | Applied? | Notes                                     |
+|----|------------------------|----------|-------------------------------------------|
+| 1️⃣ | **Codebase**          | ✅        | GitHub repo with main branch              |
+| 2️⃣ | **Dependencies**      | ✅        | `requirements.txt` (or `poetry`) used     |
+| 3️⃣ | **Config**            | ✅        | `.env` with `python-dotenv`               |
+| 4️⃣ | **Backing Services**  | ✅        | Swappable DB via `DATABASE_URL`           |
+| 5️⃣ | **Build, Release, Run**| ✅       | Docker handles build/release/run stages   |
+| 6️⃣ | **Processes**         | ✅        | Stateless, self-contained FastAPI app     |
+| 7️⃣ | **Port Binding**      | ✅        | `uvicorn` binds directly to port 8000     |
+| 8️⃣ | **Concurrency**       | ✅        | Ready for multi-process container support |
+| 9️⃣ | **Disposability**     | ✅        | Docker stop/start safe; CLI one-offs OK   |
+| 🔟 | **Dev/Prod Parity**    | ✅        | `.env.dev` and `.env.prod` used           |
+| 1️⃣1️⃣ | **Logs**           | ✅        | Logs to stdout with Python logging        |
+| 1️⃣2️⃣ | **Admin Processes** | ✅        | `admin.py list/clean` as one-off commands |
+
+---
+
+## 🧑‍💻 Getting Started (Local)
+
+```bash
+git clone https://github.com/yourusername/tasktrackr.git
+cd tasktrackr
+
+# Setup
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Run
+uvicorn main:app --reload
+```
+
+---
+
+## 🐳 Docker Usage
+
+```bash
+# Build
+docker build -t tasktrackr .
+
+# Run
+docker run -d -p 8000:8000 tasktrackr
+```
+
+---
+
+## 🚀 Deployment (Render)
+
+- Connect repo on [render.com](https://render.com/)
+- Choose Docker environment
+- Set environment variables:
+  - `ENV=production`
+  - `DATABASE_URL=sqlite+aiosqlite:///./tasks.db`
+
+---
+
+## 🛠 Admin Commands
+
+```bash
+python admin.py list     # Show all tasks
+python admin.py clean    # Delete completed tasks
+```
+
+---
+
+## 🔍 Monitoring
+
+- `/health` endpoint added for status checks
+- Registered with [UptimeRobot](https://uptimerobot.com)
+
+---
+
+## 🙌 Author
+
+Built by **John Carl Abucay**  
+📫 [abukiks.x@gmail.com](mailto:abukiks.x@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+
+---
+
+## 💡 Purpose
+
+This project was built to **learn DevOps by doing** — every step from bootstrapping to production deployment follows **real industry standards**.
