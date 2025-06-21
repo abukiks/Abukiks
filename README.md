@@ -1,116 +1,73 @@
-# ✅ TaskTrackr
+<!-- GitHub Profile README.md for John Carl Abucay (abukiks) -->
 
-A fully documented FastAPI-based microservice that follows the **12-Factor App Methodology**, built for DevOps learning and portfolio showcasing.
+<h1 align="center">Hey 👋 I'm John Carl Abucay</h1>
+<h3 align="center">🚀 DevOps | SRE | Cloud-Native | Builder of Infra from Scratch</h3>
 
-🔗 Live App: [https://tasktrackr.onrender.com](https://tasktrackr.onrender.com)  
-🐳 Docker Image: [`yourusername/tasktrackr`](https://hub.docker.com/repository/docker/yourusername/tasktrackr)
-
----
-
-## 📦 Tech Stack
-
-- **FastAPI** – Web framework
-- **SQLite / SQLAlchemy** – Database & ORM
-- **Docker** – Containerization
-- **GitHub Actions** – CI/CD
-- **Render** – Cloud deployment
-- **UptimeRobot** – Uptime monitoring
-- **python-dotenv** – Config management
+<p align="center">
+  <a href="mailto:abukiks.x@gmail.com"><img src="https://img.shields.io/badge/email-abukiks.x@gmail.com-dark?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/abukiks"><img src="https://img.shields.io/badge/linkedin-abukiks-dark?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/abukiks"><img src="https://img.shields.io/badge/github-abukiks-dark?style=for-the-badge&logo=github&logoColor=white" /></a>
+</p>
 
 ---
 
-## 🚀 Features
+### 🧠 About Me
 
-- ✅ `/tasks` CRUD API
-- ✅ `/health` endpoint for monitoring
-- ✅ Environment-based config loading (`.env.dev`, `.env.prod`)
-- ✅ Docker-ready & CI/CD pipeline with GitHub Actions
-- ✅ One-off admin CLI commands (`admin.py`)
-
----
-
-## 📘 12-Factor App Compliance
-
-| #  | Factor                 | Applied? | Notes                                     |
-|----|------------------------|----------|-------------------------------------------|
-| 1️⃣ | **Codebase**          | ✅        | GitHub repo with main branch              |
-| 2️⃣ | **Dependencies**      | ✅        | `requirements.txt` (or `poetry`) used     |
-| 3️⃣ | **Config**            | ✅        | `.env` with `python-dotenv`               |
-| 4️⃣ | **Backing Services**  | ✅        | Swappable DB via `DATABASE_URL`           |
-| 5️⃣ | **Build, Release, Run**| ✅       | Docker handles build/release/run stages   |
-| 6️⃣ | **Processes**         | ✅        | Stateless, self-contained FastAPI app     |
-| 7️⃣ | **Port Binding**      | ✅        | `uvicorn` binds directly to port 8000     |
-| 8️⃣ | **Concurrency**       | ✅        | Ready for multi-process container support |
-| 9️⃣ | **Disposability**     | ✅        | Docker stop/start safe; CLI one-offs OK   |
-| 🔟 | **Dev/Prod Parity**    | ✅        | `.env.dev` and `.env.prod` used           |
-| 1️⃣1️⃣ | **Logs**           | ✅        | Logs to stdout with Python logging        |
-| 1️⃣2️⃣ | **Admin Processes** | ✅        | `admin.py list/clean` as one-off commands |
+- 🛠 Currently building modern **DevOps pipelines** from **scratch to production**
+- ⚙️ Passionate about **cloud infrastructure**, **automation**, and **platform engineering**
+- 📘 Sharing real-world, documented projects for **learners and teams**
+- ✝️ Driven by values of **integrity**, **clarity**, and **impact**
 
 ---
 
-## 🧑‍💻 Getting Started (Local)
+### 💼 Projects
 
-```bash
-git clone https://github.com/yourusername/tasktrackr.git
-cd tasktrackr
-
-# Setup
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-# Run
-uvicorn main:app --reload
-```
+| Project | Description |
+|--------|-------------|
+| 🧩 [`ibx-cicd`](https://github.com/abukiks/ibx-cicd) | Case study: CI/CD from zero to prod with GitOps |
+| 🔧 [`ibx-cli`](https://github.com/abukiks/ibx-cli) | Custom CLI for Kubernetes/DevOps operations |
+| 🌐 [`ibx-infra`](https://github.com/abukiks/ibx-infra) | Terraform infra setup for K3s on AWS |
+| ✅ [`tasktrackr`](https://github.com/abukiks/tasktrackr) | 12-Factor App built with FastAPI (documented) |
 
 ---
 
-## 🐳 Docker Usage
+### 🧰 Toolbox
 
-```bash
-# Build
-docker build -t tasktrackr .
+#### ☁️ Cloud & IaC  
+![AWS](https://img.shields.io/badge/AWS-dark?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-dark?style=for-the-badge&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-dark?style=for-the-badge&logo=ansible&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-dark?style=for-the-badge&logo=kubernetes&logoColor=white)
 
-# Run
-docker run -d -p 8000:8000 tasktrackr
-```
+#### ⚙️ DevOps Tools  
+![Docker](https://img.shields.io/badge/Docker-dark?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-dark?style=for-the-badge&logo=githubactions&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-dark?style=for-the-badge&logo=argo&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-dark?style=for-the-badge&logo=helm&logoColor=white)
 
----
-
-## 🚀 Deployment (Render)
-
-- Connect repo on [render.com](https://render.com/)
-- Choose Docker environment
-- Set environment variables:
-  - `ENV=production`
-  - `DATABASE_URL=sqlite+aiosqlite:///./tasks.db`
-
----
-
-## 🛠 Admin Commands
-
-```bash
-python admin.py list     # Show all tasks
-python admin.py clean    # Delete completed tasks
-```
+#### 🧑‍💻 Languages & Dev  
+![Go](https://img.shields.io/badge/Go-dark?style=for-the-badge&logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-dark?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-dark?style=for-the-badge&logo=fastapi&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-dark?style=for-the-badge&logo=gnubash&logoColor=white)
 
 ---
 
-## 🔍 Monitoring
+### 📊 GitHub Analytics
 
-- `/health` endpoint added for status checks
-- Registered with [UptimeRobot](https://uptimerobot.com)
-
----
-
-## 🙌 Author
-
-Built by **John Carl Abucay**  
-📫 [abukiks.x@gmail.com](mailto:abukiks.x@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=abukiks&theme=tokyonight&hide_border=true" />
+  <br />
+  <img src="https://github-readme-stats.vercel.app/api?username=abukiks&show_icons=true&theme=tokyonight&hide_border=true" />
+  <br />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abukiks&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
 
 ---
 
-## 💡 Purpose
+### 🧭 Vision
 
-This project was built to **learn DevOps by doing** — every step from bootstrapping to production deployment follows **real industry standards**.
+> “Build with intention. Share with clarity. Scale with wisdom.”
+
+---
+
